@@ -13,6 +13,5 @@ To run the tests, you'll need to do this in a terminal (but remember to have the
 
 ```bash
 source venv/bin/activate
-cd section6/video_code/
 python -m behave tests/acceptance
 ```

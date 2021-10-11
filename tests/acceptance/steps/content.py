@@ -1,17 +1,20 @@
 from behave import *
-
-from tests.acceptance.page_model.base_page import BasePage
+import time
+from tests.acceptance.page_model.blog_page import BlogPage
 
 use_step_matcher('re')
 
 
-@then('Puslapuje yra rodoma antraste')
-def step_imp(context):
-    page = BasePage(context.driver)
-    assert page.title.is_displayed()
-
-
-@step('Puslapio antraste yra "(.*)"')
+@then('Puslapyje yra rodomas prisijungimo mygtukas "(.*)"')
 def step_imp(context, content):
-    page = BasePage(context.driver)
-    assert page.title.text == content
+    page = BlogPage(context.driver)
+    assert page.login_button.text == content
+
+
+@then('Puslapyje yra rodomas registracijos mygtukas "(.*)"')
+def step_imp(context, content):
+    page = BlogPage(context.driver)
+    assert page.registration_button.text == content
+
+
+

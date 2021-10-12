@@ -21,13 +21,13 @@ def step_impl(context):
     context.driver.get(page.url)
 
 
-@then('Atsidaro Blog puslapis')
+@then('Atsidaro "Blog" puslapis')
 def step_impl(context):
     expected_url = BlogPage(context.driver).url
     assert context.driver.current_url == expected_url
 
 
-@then('Atsidaro Home puslapis')
+@then('Atsidaro "Home" puslapis')
 def step_impl(context):
     expected_url = HomePage(context.driver).url
     assert context.driver.current_url == expected_url

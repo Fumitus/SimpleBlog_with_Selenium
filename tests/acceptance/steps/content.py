@@ -1,17 +1,17 @@
 from behave import *
 
-from tests.acceptance.page_model.base_page import BasePage
+from tests.acceptance.page_model.home_page import HomePage
 
 use_step_matcher('re')
 
 
-@then('Puslapuje yra rodoma antraste')
+@then('Puslapyje yra rodoma antraste')
 def step_imp(context):
-    page = BasePage(context.driver)
+    page = HomePage(context.driver)
     assert page.title.is_displayed()
 
 
 @step('Puslapio antraste yra "(.*)"')
 def step_imp(context, content):
-    page = BasePage(context.driver)
+    page = HomePage(context.driver)
     assert page.title.text == content

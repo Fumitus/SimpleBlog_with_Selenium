@@ -5,7 +5,7 @@ from tests.acceptance.page_model.base_page import BasePage
 use_step_matcher('re')
 
 
-@when('paspaudziu mygtuka "(.*)"')
+@when('Paspaudziu nuoroda "(.*)"')
 def step_imp(context, link_text):
     page = BasePage(context.driver)
     links = page.navigation
